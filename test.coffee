@@ -70,10 +70,10 @@ if Meteor.isClient
 		cityId: -> Meteor.user().profile.city
 		cityName: -> Geo.findOne(_id: @cityId())?.name
 		#OUR CASE - works with hardcoded value
-		#regionId:  'RU-R001'
+		#regionId:  'RU-R002'
 		#OUR CASE - supposed to work, but doesnt
 		#regionId: -> Geo.findOne(_id: @cityId().substr(0, 7))?._id
-		regionName: -> Geo.findOne(_id: @cityId().substr(0, 7))?.name
+		regionName: -> Geo.findOne(_id: @regionId())?.name
 	#value to display in the field
 		city_region: ->
 			#if city is city-region - show only city name
