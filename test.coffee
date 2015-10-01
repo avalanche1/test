@@ -13,7 +13,6 @@ if Meteor.isServer
 				{name: 'Region2', _id: 'RU-R002', type: 'region', sort: '4'}
 				{name: 'Region3', _id: 'RU-R003', type: 'region', sort: '5'}
 				{name: 'Moscow', _id: 'RU-R001-C001', type: 'city'}
-				{name: 'Checkov', _id: 'RU-R001-C002', type: 'city'}
 				{name: 'Region2City1', _id: 'RU-R002-C001', type: 'city'}
 				{name: 'Region2City2', _id: 'RU-R002-C002', type: 'city'}
 				{name: 'Region2City3', _id: 'RU-R002-C003', type: 'city'}
