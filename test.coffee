@@ -43,12 +43,12 @@ if Meteor.isClient
 	tplName = 'cityAndRegion'
 	T = Template[tplName]
 	#define VM and give it a name to persist its data across hot code push
-	vm = new ViewModel tplName
+	#vm = new ViewModel tplName
 	T.onRendered ->
 		#get tpl instance handle
 		tplInstance = this
 		#bind VM to the tpl
-		vm.bind(this)
+		#vm.bind(this)
 
 	# # # ROUTES # # #
 
@@ -65,25 +65,25 @@ if Meteor.isClient
 		popup = $('#cityAndRegion .ui.segment')
 		popup.popup
 			inline: on, hoverable: off, on: 'click', exclusive: off, position: 'bottom left', duration: 0
-	vm.extend
-	#get user city and region data for initial display 
-		cityId: -> Meteor.user().profile.city
-		cityName: -> Geo.findOne(_id: @cityId())?.name
-		#OUR CASE - works with hardcoded value
-		#regionId:  'RU-R002'
-		#OUR CASE - supposed to work, but doesnt
-		regionId: -> Geo.findOne(_id: @cityId().substr(0, 7))?._id
-		regionName: -> Geo.findOne(_id: @regionId())?.name
-	#value to display in the field
-		city_region: ->
-			#if city is city-region - show only city name
-			if @cityName() == @regionName() then @cityName()
-				#else show city and region
-			else @cityName() + " <span class='text curRegion'>(#{@regionName()})</span>"
-	#field click event
-		showPopup: ->
-			#OUR CASE - current solution: session to circumvent not working regionId method
-			Session.set 'regionId', Geo.findOne(_id: vm.cityId().substr(0, 7))?._id
+	#vm.extend
+	##get user city and region data for initial display 
+	#	cityId: -> Meteor.user().profile.city
+	#	cityName: -> Geo.findOne(_id: @cityId())?.name
+	#	#OUR CASE - works with hardcoded value
+	#	#regionId:  'RU-R002'
+	#	#OUR CASE - supposed to work, but doesnt
+	#	regionId: -> Geo.findOne(_id: @cityId().substr(0, 7))?._id
+	#	regionName: -> Geo.findOne(_id: @regionId())?.name
+	##value to display in the field
+	#	city_region: ->
+	#		#if city is city-region - show only city name
+	#		if @cityName() == @regionName() then @cityName()
+	#			#else show city and region
+	#		else @cityName() + " <span class='text curRegion'>(#{@regionName()})</span>"
+	##field click event
+	#	showPopup: ->
+	#		#OUR CASE - current solution: session to circumvent not working regionId method
+	#		Session.set 'regionId', Geo.findOne(_id: vm.cityId().substr(0, 7))?._id
 
 	## REGION CHOOSER ##
 	tplName = 'regionChooser'
@@ -128,7 +128,7 @@ if Meteor.isClient
 		#focus on search field
 			onShow: -> Meteor.defer -> $(chooseCityDD).find('input').focus()
 			onChange: (value, text, $choice)->
-				vm.extend cityName: text
+				#vm.extend cityName: text
 				popup.popup('hide')
 
 
