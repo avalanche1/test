@@ -9,7 +9,7 @@ autopublish
 insecure
 accounts-password
 coffeescript
-manuel:viewmodel
 mquandalle:jade
 semantic:ui-css
 meteorhacks:fast-render
+dalgard:viewmodel

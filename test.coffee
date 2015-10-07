@@ -72,7 +72,7 @@ if Meteor.isClient
 		#OUR CASE - works with hardcoded value
 		#regionId:  'RU-R002'
 		#OUR CASE - supposed to work, but doesnt
-		#regionId: -> Geo.findOne(_id: @cityId().substr(0, 7))?._id
+		regionId: -> Geo.findOne(_id: @cityId().substr(0, 7))?._id
 		regionName: -> Geo.findOne(_id: @regionId())?.name
 	#value to display in the field
 		city_region: ->
