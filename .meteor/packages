@@ -11,5 +11,4 @@ accounts-password
 coffeescript
 mquandalle:jade
 semantic:ui-css
-meteorhacks:fast-render
-dalgard:viewmodel
+manuel:viewmodel
