@@ -29,7 +29,7 @@ localstorage@1.0.3
 logging@1.0.7
 manuel:isdev@1.0.0
 manuel:reactivearray@1.0.5
-manuel:viewmodel@3.3.5
+manuel:viewmodel@3.4.2
 manuel:viewmodel-debug@2.6.0
 meteor@1.1.6
 meteor-platform@1.2.2

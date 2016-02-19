@@ -1,9 +1,7 @@
 <body>
-	{{>parent}}
+	{{>tpl}}
 </body>
 
-<template name="parent">
-	{{>child}}
-</template>
-<template name="child">
+<template name="tpl">
+	<input {{b "value: phoneInput, change: phoneIsMobile, ref: refToPhoneInput"}}>
 </template>
