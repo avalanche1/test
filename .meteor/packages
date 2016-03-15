@@ -8,7 +8,8 @@ meteor-platform
 autopublish
 insecure
 accounts-password
-mquandalle:jade
 semantic:ui-css
 manuel:viewmodel
 coffeescript
+mquandalle:stylus
+dalgard:jade
