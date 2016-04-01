@@ -7,9 +7,6 @@
 meteor-platform
 autopublish
 insecure
-accounts-password
-semantic:ui-css
-manuel:viewmodel
 coffeescript
-mquandalle:stylus
-dalgard:jade
+manuel:viewmodel
+accounts-password

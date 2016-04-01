@@ -1,0 +1,20 @@
+<head>
+  <title>test</title>
+</head>
+
+<body>
+		{{> tpl}}
+</body>
+
+<template name="tpl">
+	{{#if currentUser}}  
+		<div {{b "text: text1"}}>	</div>
+	{{else}}
+		<div {{b "text: text2"}}>	</div>
+	{{/if}}
+	{{#if currentUser}}  
+		<button {{b "click: logout"}}>logout</button>
+	{{else}}
+		<button {{b "click: login"}}>login</button>
+	{{/if}}
+</template>
